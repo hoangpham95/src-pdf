@@ -20,7 +20,3 @@ $(EXECUTABLE) : $(OBJECTS)
 
 clean:
 	rm -rf *~ *.swp *.o generated.*
-add:
-	git add -A
-push:
-	git push
