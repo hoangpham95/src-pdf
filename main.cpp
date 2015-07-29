@@ -13,7 +13,7 @@ int main() {
   
   bool existing_info = check_file_existence(dir, "COPYRIGHT");
   if (existing_info) {
-    cout << "You have the copy right form" << endl;
+    cout << "You have the copyright form" << endl;
   } else {
     cout << no_copyright_form << endl;
   }
