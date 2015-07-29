@@ -33,7 +33,7 @@ const string generating_template(string doc_class, string project_name, string a
   header += "\\lstset{style=mystyle}\n";
   header += "\\title{" + project_name +"}\n";
   header += "\\author{" + author +"}\n";
-  header += "\\begin{document}\n\\maketitle\n\\lstlistoflistings\n" + content + "\n" + "\\end{document}\n";
+  header += "\\begin{document}\n\\maketitle\n\\lstlistoflistings\n\\clearpage\n" + content + "\n" + "\\end{document}\n";
 
   return header;
 }

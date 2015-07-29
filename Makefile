@@ -4,7 +4,7 @@
 #	rm -rf generated.* *~ *.swp *.out
 
 CC=g++
-CFLAGS=-Wall -c -std=c++11
+CFLAGS=-Wall -c -std=c++11 -O0 -g
 LDFLAGS=
 SOURCES=main.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
@@ -19,8 +19,12 @@ $(EXECUTABLE) : $(OBJECTS)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf *~ *.swp *.o generated.*
+	rm -rf *~ *.swp *.o generated.* main
 add:
 	git add -A
 push:
 	git push
+gdb:
+	gdb ./main
+compile:
+	pdflatex generated.tex

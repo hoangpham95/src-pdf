@@ -5,7 +5,6 @@ int main() {
   string dir (current);
   string s = recursive_tex_folder(dir);
   string full_document = default_generation(s);
-
  
   ofstream output;
   output.open ("generated.tex");
