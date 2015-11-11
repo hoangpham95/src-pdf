@@ -39,6 +39,6 @@ const string valid_file_extension[SUPPORTED_LANGUAGES] = {".cpp", // C++
                                                          ".js", // Javascript
                                                          ".html", // HTML
                                                          ".css", // CSS
-                                                         ".rkt" // racket
+                                                         ".rkt"// racket
                                                         };
                                     

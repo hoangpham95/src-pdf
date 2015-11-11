@@ -57,7 +57,7 @@ const string generate_valid_tex_directory(string dirname) {
   }
 
   int new_length = l + underscore_count;
-  char* valid_dir = (char *) malloc(sizeof(char) * new_length);
+  char* valid_dir = new char[new_length];
 
   valid_dir[new_length] = '\0';
 

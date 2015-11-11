@@ -55,14 +55,15 @@ string recursive_tex_folder(string dirname) {
       string name (ent->d_name);
 
       if (S_ISDIR(st.st_mode)) {
-        if (name.compare(".") != 0 && name.compare("..") != 0) {
+	cout << name << " is a directory " << endl;
+        if (name.compare(".") != 0 && name.compare("..") != 0 && name.compare(".git") != 0) {
           cout << "Opening DIRECTORY " << name << endl;
           all += recursive_tex_folder(dirname +"/" + name);
         }
       }
 
       else {
-        if (has_valid_suffix(name)) {
+        if (has_valid_suffix(name) && name.compare("main") != 0) {
           //all += ("File: " + dirname + "/" + name + '\n');
           string valid_dir = "File: " + dirname + "/" + name + '\n';
           all += generate_valid_tex_directory(valid_dir);
